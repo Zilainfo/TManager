@@ -4,49 +4,61 @@ Version 0.01
 
 ## Script Options
 
---username
+* **--username:**
+
 A valid username of a user account with access to the Tomcat management pages.
 
 ```
 $ perl Main.pm --username myusername
 ```
 
---password
+* **--password:**
+
 The password for the user account given for the username parameter above.
 
 ```
 $ perl Main.pm --password mypass
 ```
 
---hostname
+* **--hostname:**
+
 The resolvable hostname or IP address of the target Tomcat server.
 
 ```
 $ perl Main.pm --hostname myhost.com
 ```
 
---action
-Run Actions
-Defults test
+* **--action**
+
+Run Actions:
+Defults test.
 
 ```
 $ perl Main.pm --action deploy
 ```
 
-deploy   - Deploy Webapp
-undeploy - Undeploy Webapp
-start    - Start Webapp
-stop     - Stop Webapp
-info     - Info Webapp about process
-check    - Check if Webapp response
-test     - Module implement the following pipeline:
-             Deploy application
-             Start application  
-             Check if application works and responses
-             Undeploy application
-             Check if application no longer available                 
+* **deploy**   - Deploy Webapp;
 
---config
+* **undeploy** - Undeploy Webapp;
+
+* **start**    - Start Webapp;
+
+* **stop**     - Stop Webapp;
+
+* **info**     - Info Webapp about process;
+
+* **check**    - Check if Webapp response;
+
+* **test**     - Module implement the following pipeline:
+             - **Deploy application;**
+             - **Start application;**  
+             - **Check if application works and responses;**
+             - **Undeploy application;**
+             - **Check if application no longer available;**                 
+
+* **--config**
+ 
+ 
 Config file
 Defults /TManager/logs/conf.cfg
 
@@ -55,27 +67,31 @@ Defults /TManager/logs/conf.cfg
 $ perl Main.pm --config /path/myconf.cfg
 ```
 
---save_conf
+* **--save_conf**
+
 Change or save your config or options in /TManager/logs/conf.cfg
 
 ```
 $ perl Main.pm --save_conf
 ```
 
---war
+* **--war**
+
 Name and directory for Webapp .WAR file.
 
 ```
 $ perl Main.pm --war /mydir/app.war
 ```
 
---path
+* **--path**
+
 Name of Webapp path on Tomcat server.
 
 ```
 $ perl Main.pm --path /myappname
 ```
---port
+* **--port**
+
 The target port on the target Tomcat server on which to connect.
 If this parameter is not specified then it defaults to port 8080.
 
@@ -83,7 +99,8 @@ If this parameter is not specified then it defaults to port 8080.
 $ perl Main.pm --port myport
 ```
 
---proto
+* **--proto**
+
 The protocol to use when connecting to the target Tomcat server.
 
 If this parameter is not specified then it defaults to HTTP.
@@ -91,13 +108,15 @@ If this parameter is not specified then it defaults to HTTP.
 ```
 $ perl Main.pm --proto http
 ```
---debug
+* **--debug**
+
 Output debug info
 
 ```
 $ perl Main.pm --debug
 ```
---error_log
+* **--error_log**
+
 Write log file
 
 ```
